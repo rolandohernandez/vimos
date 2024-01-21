@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'Monoton';
+  src: url('fonts/Monoton-Regular.woff2') format('woff2'),
+      url('fonts/Monoton-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crete Round';
+  src: url('fonts/CreteRound-Italic.woff2') format('woff2'),
+      url('fonts/CreteRound-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crete Round';
+  src: url('fonts/CreteRound-Regular.woff2') format('woff2'),
+      url('fonts/CreteRound-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Courier';
+  text-align: center;
+  background-image: url(FINAL.jpg);
+  background-size: cover;
+  color: rgb(213, 213, 213);
+  font-size: 16px;
+  padding: 70px 0;
+}
+
+h1 {
+  line-height: 1;
+  font-family: 'Monoton';
+  font-weight: normal;
+  font-size: 80px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 26px 0 35px 0;
+  list-style: none;
+}
+
+.menu-item {
+  width: 90px;
+  padding: 10px 15px;
+  font-weight: bold;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 300ms ease-in-out;
+}
+
+.menu-item:hover,
+.menu-item.is-active {
+  opacity: 1;
+}
+
+p {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  line-height: 26px;
+  max-width: 650px;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 352px;
+}
+
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 0;
+  max-width: 1000px;
+  padding: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.collection.is-active {
+  height: auto;
+  opacity: 1;
+  overflow: visible;
+  visibility: visible;
+  pointer-events: visible;
+}
+
+@media (max-width: 768px) {
+  .collection {
+    margin-top: 22px;
+  }
+}
+
+.collection#backlog .game-info {
+  display: none;
+}
+
+.collection#backlog .game {
+  pointer-events: none;
+}
+
+.item {
+  transform: rotate(-1deg);
+  transition: transform 300ms ease-in-out;
+  margin-bottom: 50px;
+}
+
+.item:nth-child(odd) {
+  transform: rotate(1deg);
+}
+
+.item-poster {
+  width: 260px;
+  padding: 8px;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(213, 213, 213);
+  box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
+  filter: saturate(70%) contrast(85%);
+  margin: 0 20px;
+}
+
+.item-poster img {
+  width: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.item-poster:before, .item-poster:after {
+  content: '';
+  width: 100%;
+  left: 0;
+  position: absolute;
+}
+
+.item-poster:before {
+  height: 4%;
+  bottom: -4%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(177deg, rgba(0,0,0,0.22) 10%, transparent 50%), linear-gradient(-177deg, rgba(0,0,0,0.22) 10%, transparent 50%);
+  background-size: 49% 100%;
+  background-position: 2% 0, 98% 0;
+}
+
+.item-poster:after {
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(-5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(-265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(-5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(266deg, rgba(0,0,0,0.2), transparent 10%);
+  background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+  background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom;
+}
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+footer a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('pad.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: transparent;
+  text-indent: -9999px;
+}
