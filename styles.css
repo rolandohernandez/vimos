@@ -1,45 +1,38 @@
 @font-face {
-  font-family: 'Monoton';
-  src: url('fonts/Monoton-Regular.woff2') format('woff2'),
-      url('fonts/Monoton-Regular.woff') format('woff');
+  font-family: 'Rubik Dirt';
+  src: url('fonts/RubikDirt-Regular.woff2') format('woff2'),
+      url('fonts/RubikDirt-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Crete Round';
-  src: url('fonts/CreteRound-Italic.woff2') format('woff2'),
-      url('fonts/CreteRound-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Crete Round';
-  src: url('fonts/CreteRound-Regular.woff2') format('woff2'),
-      url('fonts/CreteRound-Regular.woff') format('woff');
+  font-family: 'Mansalva';
+  src: url('fonts/Mansalva-Regular.woff2') format('woff2'),
+      url('fonts/Mansalva-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 
 body {
-  font-family: 'Courier';
+  font-family: 'Mansalva';
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);  
   text-align: center;
-  background-image: url(FINAL.jpg);
-  background-size: cover;
-  color: rgb(213, 213, 213);
+  color: black;
   font-size: 16px;
   padding: 70px 0;
 }
 
 h1 {
+  font-family: 'Mansalva';
+  font-size: 100px;
+  color: black;
   line-height: 1;
-  font-family: 'Monoton';
   font-weight: normal;
-  font-size: 80px;
   margin: 0;
 }
 
@@ -140,6 +133,10 @@ img {
   transform: rotate(1deg);
 }
 
+.item:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
 .item-poster {
   width: 260px;
   padding: 8px;
@@ -147,7 +144,6 @@ img {
   box-sizing: border-box;
   background-color: rgb(213, 213, 213);
   box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
-  filter: saturate(70%) contrast(85%);
   margin: 0 20px;
 }
 
